@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>VideoRecoder</id>
+    <version>1.0.0</version>
+    <authors>VideoRecoder</authors>
+    <owners>VideoRecoder</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A software that helps you quickly convert video encoding and formatting</description>
+    <copyright>Funtisation Develop</copyright>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\xjy20\source\repos\VideoRecoder\bin\Debug\netcoreapp3.1\VideoRecoder.runtimeconfig.json" target="lib\netcoreapp3.1\VideoRecoder.runtimeconfig.json" />
+    <file src="C:\Users\xjy20\source\repos\VideoRecoder\bin\Debug\netcoreapp3.1\VideoRecoder.dll" target="lib\netcoreapp3.1\VideoRecoder.dll" />
+  </files>
+</package>

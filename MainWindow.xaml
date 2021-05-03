@@ -1,0 +1,21 @@
+﻿<Window x:Class="VideoRecoder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VideoRecoder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Height="407" Margin="0,0,10,0">
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Text="Vedio Recoder" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="337" FontSize="52"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,154,0,0" Text="input video: " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="inputFilePath" HorizontalAlignment="Center" Margin="0,146,0,0" Text="input path here" TextWrapping="Wrap" VerticalAlignment="Top" Width="522" Height="40" Background="#FFDEDEDE"/>
+        <Button x:Name="inputBrowseButton" Content="Browse" HorizontalAlignment="Right" Margin="0,146,19,0" VerticalAlignment="Top" Width="98" Height="40" Click="inputBrowseButton_Click" Background="#FF66CCFF" Foreground="White" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,258,0,0" Text="output Video: " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="videoType" HorizontalAlignment="Left" Margin="124,258,0,0" VerticalAlignment="Top" Width="120" Height="24" IsSynchronizedWithCurrentItem="True" IsEditable="True" />
+        <TextBox x:Name="outputFilePath" HorizontalAlignment="Right" Margin="0,250,134,0" Text="output path here" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" Height="40" Background="#FFD4D4D4"/>
+        <Button x:Name="outputBrowseButton" Content="Browse" HorizontalAlignment="Right" Margin="0,0,19,117" Width="98" Click="outputBrowseButton_Click" FontSize="18" Background="#FF66CCFF" Foreground="White" Height="40" VerticalAlignment="Bottom"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Center" Margin="0,335,0,0" Width="180" Click="startButton_Click" Foreground="White" Background="#FF03E3B3" FontSize="24" Height="54" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
