@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3g+4+qw2z0BEf4C3Ohtj2LJL6E69clBYntwa28+BRuRKdh1PF5kGqxstAJHBBe/4+TaWMRKkIUzkXcvB1cYcjg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\xjy20\\source\\VideoRecoder\\VideoRecoder.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\xjy20\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\3.1.21\\microsoft.netcore.app.host.win-x86.3.1.21.nupkg.sha512"
+  ],
+  "logs": []
+}

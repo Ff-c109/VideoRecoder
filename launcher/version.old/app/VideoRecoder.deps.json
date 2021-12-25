@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "VideoRecoder/1.0.0": {
+        "runtime": {
+          "VideoRecoder.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VideoRecoder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -83,6 +83,24 @@ namespace VideoRecoder
                 id = 7,
                 ids = 8
             });
+            videoTypeDropDown.Add(new dropDownList
+            {
+                name = "gif",
+                id = 8,
+                ids = 9
+            });
+            videoTypeDropDown.Add(new dropDownList
+            {
+                name = "mp3",
+                id = 9,
+                ids = 10
+            });
+            videoTypeDropDown.Add(new dropDownList
+            {
+                name = "h264 UHD",
+                id = 10,
+                ids = 11
+            });
             videoType.ItemsSource = videoTypeDropDown;
             videoType.DisplayMemberPath = "name";
             videoType.SelectedValuePath = "ids";
@@ -116,37 +134,49 @@ namespace VideoRecoder
             //-vcodec h264
             if(theVideoType == 1)
             {
-                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i " + inputFilePath.Text + " -vcodec h264 " + outputFilePath.Text);
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" -vcodec h264 \"" + outputFilePath.Text + "\"");
             }
             else if(theVideoType == 2)
             {
-                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i " + inputFilePath.Text + " -c:v libx265 " + outputFilePath.Text);
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" -c:v libx265 \"" + outputFilePath.Text + "\"");
             }
             else if(theVideoType == 3)
             {
-                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i " + inputFilePath.Text + " -vcodec h264 " + outputFilePath.Text);
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" -vcodec h264 \"" + outputFilePath.Text + "\"");
             }
             else if(theVideoType == 4)
             {
-                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i " + inputFilePath.Text + " " + outputFilePath.Text);
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" \"" + outputFilePath.Text + "\"");
             }
             else if(theVideoType == 5)
             {
-                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i " + inputFilePath.Text + " " + outputFilePath.Text);
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" \"" + outputFilePath.Text + "\"");
             }
             else if(theVideoType == 6)
             {
-                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i " + inputFilePath.Text + " " + outputFilePath.Text);
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" \"" + outputFilePath.Text + "\"");
             }
             else if(theVideoType == 7)
             {
-                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i " + inputFilePath.Text + " " + outputFilePath.Text);
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" \"" + outputFilePath.Text + "\"");
             }
             else if(theVideoType == 8)
             {
-                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i " + inputFilePath.Text + " " + outputFilePath.Text);
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" \"" + outputFilePath.Text + "\"");
             }
-            
+            else if(theVideoType == 9)
+            {
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" \"" + outputFilePath.Text + "\"");
+            }
+            else if(theVideoType == 10)
+            {
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" \"" + outputFilePath.Text + "\"");
+            }
+            else if (theVideoType == 11)
+            {
+                Process pro = Process.Start(@"ffmpeg\ffmpeg.exe", "-i \"" + inputFilePath.Text + "\" -vcodec h264 -b:v 2000000K \"" + outputFilePath.Text + "\"");
+            }
+
         }
 
         private void outputBrowseButton_Click(object sender, RoutedEventArgs e)
@@ -188,7 +218,7 @@ namespace VideoRecoder
             }
             else if(fileType == "5")
             {
-                sfd.Filter = "MKV文件 (*.mov) | *.mkv";
+                sfd.Filter = "MKV文件 (*.mkv) | *.mkv";
                 if (sfd.ShowDialog() != true)
                     return;
                 outputFilePath.Text = sfd.FileName;
@@ -213,6 +243,30 @@ namespace VideoRecoder
             else if(fileType == "8")
             {
                 sfd.Filter = "WEBM文件 (*.webm) | *.webm";
+                if (sfd.ShowDialog() != true)
+                    return;
+                outputFilePath.Text = sfd.FileName;
+                theVideoType = 7;
+            }
+            else if(fileType == "9")
+            {
+                sfd.Filter = "GIF文件 (*.gif) | *.gif";
+                if (sfd.ShowDialog() != true)
+                    return;
+                outputFilePath.Text = sfd.FileName;
+                theVideoType = 7;
+            }
+            else if(fileType == "10")
+            {
+                sfd.Filter = "MP3文件 (*.mp3) | *.mp3";
+                if (sfd.ShowDialog() != true)
+                    return;
+                outputFilePath.Text = sfd.FileName;
+                theVideoType = 7;
+            }
+            else if(fileType == "11")
+            {
+                sfd.Filter = "h264 (*.mp4) | *.mp4";
                 if (sfd.ShowDialog() != true)
                     return;
                 outputFilePath.Text = sfd.FileName;
