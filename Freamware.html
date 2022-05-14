@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Video Recoder</title>
+        <style>
+            a.listMember {
+                font-size: 18px;
+                color: #03dec9;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function load() {
+                setTimeout(() => {
+                    var url = window.location;
+                    url += "";
+                    var page = url.split("#")[1];
+                    document.getElementById('mainDisplay').src = page;
+                }, 200);
+            }
+            function setPage(pageUrl) {
+                window.location = "#" + pageUrl;
+                load();
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <img style="width: 1em" />
+            <a style="font-size: 22px">Video Recoder</a>
+            <img style="width: 2em" />
+            <a class="listMember" onclick='setPage("Home.html")'>Home</a>
+            <img style="width: 1em" />
+            <a class="listMember" onclick='setPage("About.html")'>About</a>
+            <img style="width: 1em" />
+            <a class="listMember" onclick='setPage("Logs.html")'>Update Logs</a>
+            <hr />
+        </header>
+        <iframe id="mainDisplay" style="width: 100%; height: 100%; border: 0px solid #000000"></iframe>
+        <script>
+            load();
+        </script>
+    </body>
+
+</html>
